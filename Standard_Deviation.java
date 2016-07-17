@@ -99,7 +99,6 @@ public class Standard_Deviation {
 		BigDecimal sum = getSum(input);
 		BigDecimal mean = new BigDecimal(0);
 		
-		System.out.println("Sum of input = " + sum);
 		mean = sum.divide(new BigDecimal(input.length));
 		
 		return mean;
