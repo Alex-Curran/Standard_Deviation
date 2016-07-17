@@ -1,4 +1,6 @@
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 
 public class Standard_Deviation {
 	
@@ -85,7 +87,7 @@ public class Standard_Deviation {
 		BigDecimal sum = getSum(input);
 		
 		//Divide by n-1
-		return sum.divide(new BigDecimal(input.length - 1));
+		return sum.divide(new BigDecimal(input.length - 1),RoundingMode.HALF_UP);
 	}
 	
 	/****
@@ -99,7 +101,7 @@ public class Standard_Deviation {
 		BigDecimal sum = getSum(input);
 		BigDecimal mean = new BigDecimal(0);
 		
-		mean = sum.divide(new BigDecimal(input.length));
+		mean = sum.divide(new BigDecimal(input.length), RoundingMode.HALF_UP);
 		
 		return mean;
 		
